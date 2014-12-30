@@ -47,21 +47,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	<div class="span2 offset3 text-center">
 		<?php echo wedocracy_get_avatar(get_the_author_meta('user_email'), $size = '100'); ?>
 		<br ><br><div class="clearfix"></div>
-
-		<?php
-		$value_twitter = get_cimyFieldValue(1, 'TWITTER');
-		$value_facebook = get_cimyFieldValue(1, 'FACEBOOK');
-		$value_pinterest = get_cimyFieldValue(1, 'PINTEREST');
-		$value_googleplus = get_cimyFieldValue(1, 'GOOGLEPLUS');
-
-		echo $value_twitter?'<a href="' . cimy_uef_sanitize_content($value_twitter) . '"><i class="icon icon-twitter-sign"></i></a>':'';
-
-		echo $value_facebook?'&nbsp;<a href="' . cimy_uef_sanitize_content($value_facebook) . '"><i class="icon icon-facebook-sign"></i></a>':'';
-
-		echo $value_pinterest?'&nbsp;<a href="' . cimy_uef_sanitize_content($value_pinterest) . '"><i class="icon icon-pinterest-sign"></i></a>':'';
-
-		echo $value_googleplus?'&nbsp;<a href="' . cimy_uef_sanitize_content($value_googleplus) . '"><i class="icon icon-google-plus-sign"></i></a>':'';
-		?>
+		<?php do_shortcode('[userfields]'); ?>
 		<br>
 		<a href="<?php the_author_meta('user_url'); ?>"><?php the_author_meta('user_url'); ?></a>
 	</div>

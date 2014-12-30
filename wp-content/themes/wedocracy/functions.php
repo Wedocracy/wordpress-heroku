@@ -171,10 +171,10 @@ function showAdminMessages()
 		$plugin_messages[] = 'This theme requires you to install the Disqus comment system plugin, <a href="http://wordpress.org/extend/plugins/disqus-comment-system/">download it from here</a>.';
 	}
 
-	// Download the Cimy User Extra Fields plugin
-	if(!is_plugin_active( 'cimy-user-extra-fields/cimy_user_extra_fields.php' ))
+	// Download the User Social Fields plugin
+	if(!is_plugin_active( 'user-social-fields/user-social-fields.php' ))
 	{
-		$plugin_messages[] = 'This theme requires you to install the Cimy User Extra Fields plugin, <a href="http://wordpress.org/extend/plugins/cimy-user-extra-fields/">download it from here</a>.';
+		$plugin_messages[] = 'This theme requires you to install the User Social Fields plugin, <a href="http://wordpress.org/extend/plugins/user-social-fields/">download it from here</a>.';
 	}
 
 	if(count($plugin_messages) > 0)
