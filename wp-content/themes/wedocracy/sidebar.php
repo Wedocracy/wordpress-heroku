@@ -46,7 +46,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <div class="row">
 	<div class="span2 offset3 text-center">
 		<?php echo wedocracy_get_avatar(get_the_author_meta('user_email'), $size = '100'); ?>
-		<br ><br><div class="clearfix"></div>
+		<br ><br><div class="clearfix"></div>userfields: 
 		<?php do_shortcode('[userfields fields="facebook,gplus"]'); ?>
 		<br>
 		<a href="<?php the_author_meta('user_url'); ?>"><?php the_author_meta('user_url'); ?></a>
