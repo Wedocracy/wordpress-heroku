@@ -101,19 +101,19 @@ function ja_userfields( $atts, $content = null ) {
 			'youtube' => get_user_meta($user, 'youtube', true),
 			);
 		
-		$ret .= '<ul class="userfields">';
+		$ret .= '<div class="userfields">';
 		
 		foreach ($fields as $field):
 			
 			if (array_key_exists($field, $userfields) && $userfields[$field]):
 				
-				$ret .= '<li class="userfield userfield-'. $field .'"><a href="'. ja_userfields_addhttp($userfields[$field]) .'" target="_blank">'. $field .'</a></li>';
+				$ret .= '&nbsp;<a href="'. ja_userfields_addhttp($userfields[$field]) .'" target="_blank" title='. $field .'><i class="icon icon-'. $field .'-sign"></i></a>';
 				
 			endif;
 			
 		endforeach;
 		
-		$ret .= '</ul>';
+		$ret .= '</div>';
 		
 	endif;
 	
