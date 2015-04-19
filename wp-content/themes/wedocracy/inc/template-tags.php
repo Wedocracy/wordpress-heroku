@@ -17,7 +17,7 @@ function wedocracy_paging_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
+	<nav class="navigation paging-navigation text-center" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'wedocracy' ); ?></h1>
 		<div class="nav-links">
 
