@@ -15,7 +15,7 @@
 						<?php
 						if ( has_post_thumbnail() ) : ?>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail( 'post-thumb' , array('class' => 'img-circle')); ?>
+							<?php the_post_thumbnail( 'post-thumb' , array('class' => 'img-circle','style' => 'width:300px')); ?>
 						</a>
 						<?php endif; ?>
 					</div>
