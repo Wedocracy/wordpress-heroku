@@ -14,10 +14,13 @@
  * @package WordPress
  */
 
-// ** Heroku Postgres settings - from Heroku Environment ** //
-$db = parse_url($_ENV["DATABASE_URL"]);
+if($_SERVER['HTTP_HOST'] === 'polar-ocean-5295.herokuapp.com' || $_SERVER['HTTP_HOST'] === 'blog.wedocracy.com') {
+	// ** Heroku Postgres settings - from Heroku Environment ** //
+	$db = parse_url($_ENV["DATABASE_URL"]);
+} else {
+	$db = parse_url('postgres://petejacobson:qr382w65@localhost:5432/wedocracy');
+}
 
-// ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', trim($db["path"],"/"));
 
@@ -53,7 +56,7 @@ define('AUTH_SALT',        getenv('AUTH_SALT'));
 define('SECURE_AUTH_SALT', getenv('SECURE_AUTH_SALT'));
 define('LOGGED_IN_SALT',   getenv('LOGGED_IN_SALT'));
 define('NONCE_SALT',       getenv('NONCE_SALT'));
-
+define('FS_METHOD','direct');
 /**#@-*/
 
 define( 'AWS_ACCESS_KEY_ID', 		getenv('AWS_ACCESS_KEY_ID'));

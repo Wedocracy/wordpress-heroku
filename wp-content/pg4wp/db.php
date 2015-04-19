@@ -22,7 +22,11 @@ define( 'PG4WP_LOG_ERRORS', false);
 
 // If you want to allow insecure configuration (from the author point of view) to work with PG4WP,
 // change this to true
-define( 'PG4WP_INSECURE', false);
+if($_SERVER['HTTP_HOST'] === 'polar-ocean-5295.herokuapp.com' || $_SERVER['HTTP_HOST'] === 'blog.wedocracy.com') {
+	define( 'PG4WP_INSECURE', false);
+} else {
+	define( 'PG4WP_INSECURE', true);
+}
 
 // This defines the directory where PG4WP files are loaded from
 //   2 places checked : wp-content and wp-content/plugins
